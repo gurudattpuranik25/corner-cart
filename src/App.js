@@ -1,5 +1,13 @@
+import { FcBriefcase } from "react-icons/fc";
+import Navbar from "./components/Navbar/Navbar";
+
 function App() {
-  return <div className=" text-3xl text-teal-700">This is your Cart</div>;
+  return (
+    <div>
+      <Navbar />
+      <FcBriefcase />
+    </div>
+  );
 }
 
 export default App;
