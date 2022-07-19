@@ -6,8 +6,8 @@ function App() {
   return (
     <div>
       <Navbar />
-      <MainContainer />
-      <FcBriefcase />
+      {/* <MainContainer />
+      <FcBriefcase /> */}
     </div>
   );
 }
