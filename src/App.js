@@ -1,5 +1,5 @@
 function App() {
-  return <div>Corner cart</div>;
+  return <div>This is your Cart</div>;
 }
 
 export default App;
