@@ -1,13 +1,15 @@
-import { FcBriefcase } from "react-icons/fc";
 import MainContainer from "./components/MainContainer/MainContainer";
 import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
     <div>
-      <Navbar />
-      {/* <MainContainer />
-      <FcBriefcase /> */}
+      <div className="sticky top-0 z-50">
+        <Navbar />
+      </div>
+      <div className="relative">
+        <MainContainer />
+      </div>
     </div>
   );
 }

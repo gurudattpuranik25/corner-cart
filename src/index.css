@@ -1,3 +1,8 @@
+html {
+  overflow-x: hidden;
+  background-color: rgb(224, 224, 224);
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
