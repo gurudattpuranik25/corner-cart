@@ -2,15 +2,18 @@ import React from "react";
 import logo from "../../images/CornerCart.PNG";
 import flag from "../../images/india.png";
 import { BsSearch } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
-function Navbar() {
+function Navbar({ itemArray }) {
   return (
     <div className=" flex justify-between items-center p-2 w-screen bg-gray-800">
-      <img
-        className=" w-44 h-10 ml-4 rounded-lg cursor-pointer"
-        src={logo}
-        alt="logo"
-      />
+      <Link to="/">
+        <img
+          className=" w-44 h-10 ml-4 rounded-lg cursor-pointer"
+          src={logo}
+          alt="logo"
+        />
+      </Link>
       <div className=" flex w-[50%] items-center focus:border-4 focus:border-yellow-500">
         <input
           type="text"
@@ -24,13 +27,15 @@ function Navbar() {
         <p className=" cursor-pointer ">
           Hello, Sign in &nbsp; <i className="fa-solid fa-user text-xl"></i>{" "}
         </p>
-        <div className=" flex items-center  cursor-pointer">
-          <i className="fa-solid fa-cart-shopping text-3xl relative"></i>
-          <p className=" absolute top-2 right-14 w-5 h-5 flex items-center justify-center rounded-full bg-orange-600 font-semibold">
-            0
-          </p>
-          <p className=" ml-2">Cart</p>
-        </div>
+        <Link to="/cart">
+          <div className=" flex items-center  cursor-pointer">
+            <i className="fa-solid fa-cart-shopping text-3xl relative"></i>
+            <p className=" absolute top-2 right-14 w-5 h-5 flex items-center justify-center rounded-full bg-orange-600 font-semibold">
+              {itemArray.length}
+            </p>
+            <p className=" ml-2">Cart</p>
+          </div>
+        </Link>
       </div>
     </div>
   );

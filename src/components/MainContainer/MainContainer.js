@@ -1,12 +1,22 @@
 import React from "react";
+import Filter from "./Filter";
 import PrimeSlider from "./PrimeSlider";
 import ProductList from "./ProductList";
+import Products from "./Products";
+import SlideProducts from "./SlideProducts";
 
-function MainContainer() {
+function MainContainer({ addToCart }) {
   return (
     <div>
       <PrimeSlider />
-      <ProductList />
+      <ProductList addToCart={addToCart} />
+      <div className=" ml-3 mt-6  flex gap-8">
+        <Filter />
+        <Products addToCart={addToCart} />
+      </div>
+      <div className=" mb-6">
+        <SlideProducts />
+      </div>
     </div>
   );
 }

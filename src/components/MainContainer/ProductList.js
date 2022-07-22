@@ -1,10 +1,10 @@
 import React from "react";
 import TopDeals from "./TopDeals";
 
-function ProductList() {
+function ProductList({ addToCart }) {
   return (
     <div className=" w-screen bg-gray-200">
-      <TopDeals />
+      <TopDeals addToCart={addToCart} />
     </div>
   );
 }

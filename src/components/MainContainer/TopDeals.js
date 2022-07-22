@@ -2,8 +2,9 @@ import React from "react";
 import data from "./data";
 import { FcCancel } from "react-icons/fc";
 import { FcApproval } from "react-icons/fc";
+import { BiRupee } from "react-icons/bi";
 
-function TopDeals() {
+function TopDeals({ addToCart }) {
   const {
     topDealsCardOne,
     topDealsCardTwo,
@@ -13,11 +14,11 @@ function TopDeals() {
 
   return (
     <div>
-      <h1 className=" text-center font-bold text-3xl p-3 ">
+      <h1 className="font-bold text-3xl py-6 px-3 drop-shadow-2xl ">
         Top Deals...Not to be missed!!
       </h1>
       <div className=" grid grid-cols-4 text-center ml-3 ">
-        <div className=" bg-white w-[22rem] h-[28rem] rounded-sm relative">
+        <div className=" bg-white w-[22rem] h-[28rem] rounded-sm">
           <div className=" m-4">
             <h1 className=" font-semibold text-2xl mb-2">
               Up to 70% off | Clearance store
@@ -27,11 +28,17 @@ function TopDeals() {
                 <img src={item.image} alt="laptop" />
                 <div className=" flex justify-between mt-2">
                   <p>{item.name}</p>
-                  <p>$ {item.price}</p>
+                  <p className=" flex items-center">
+                    {" "}
+                    <BiRupee /> {item.price}
+                  </p>
                 </div>
                 <div className=" flex justify-between mt-2">
                   <p className=" text-xs">{item.rating}</p>
-                  <i className="fa-solid fa-basket-shopping text-lg cursor-pointer"></i>
+                  <i
+                    className="fa-solid fa-basket-shopping text-lg cursor-pointer"
+                    onClick={() => addToCart(item)}
+                  ></i>
                 </div>
                 {item.freeDelivery ? (
                   <p className=" text-xs flex">
@@ -58,12 +65,18 @@ function TopDeals() {
                 <div key={item.id}>
                   <img src={item.image} alt="laptop" />
                   <div className=" flex justify-between mt-2">
-                    <p className="  ">{item.name}</p>
-                    <p className="  ">$ {item.price}</p>
+                    <p>{item.name}</p>
+                    <p className=" flex items-center">
+                      {" "}
+                      <BiRupee /> {item.price}
+                    </p>
                   </div>
                   <div className=" flex justify-between mt-1 mb-1">
                     <p className=" text-xs">{item.rating}</p>
-                    <i className="fa-solid fa-basket-shopping cursor-pointer"></i>
+                    <i
+                      className="fa-solid fa-basket-shopping cursor-pointer"
+                      onClick={() => addToCart(item)}
+                    ></i>
                   </div>
                   {item.freeDelivery ? (
                     <p className=" text-xs flex justify-start">
@@ -91,12 +104,18 @@ function TopDeals() {
                 <div key={item.id}>
                   <img src={item.image} alt="laptop" />
                   <div className=" flex justify-between mt-2">
-                    <p className="  ">{item.name}</p>
-                    <p className="  ">$ {item.price}</p>
+                    <p>{item.name}</p>
+                    <p className=" flex items-center">
+                      {" "}
+                      <BiRupee /> {item.price}
+                    </p>
                   </div>
                   <div className=" flex justify-between mt-1 mb-1">
                     <p className=" text-xs">{item.rating}</p>
-                    <i className="fa-solid fa-basket-shopping cursor-pointer"></i>
+                    <i
+                      className="fa-solid fa-basket-shopping cursor-pointer"
+                      onClick={() => addToCart(item)}
+                    ></i>
                   </div>
                   {item.freeDelivery ? (
                     <p className=" text-xs flex justify-start">
@@ -124,12 +143,18 @@ function TopDeals() {
                 <div key={item.id}>
                   <img src={item.image} alt="laptop" />
                   <div className=" flex justify-between mt-2">
-                    <p className="  ">{item.name}</p>
-                    <p className="  ">$ {item.price}</p>
+                    <p>{item.name}</p>
+                    <p className=" flex items-center">
+                      {" "}
+                      <BiRupee /> {item.price}
+                    </p>
                   </div>
                   <div className=" flex justify-between mt-1 mb-1">
                     <p className=" text-xs">{item.rating}</p>
-                    <i className="fa-solid fa-basket-shopping cursor-pointer"></i>
+                    <i
+                      className="fa-solid fa-basket-shopping cursor-pointer"
+                      onClick={() => addToCart(item)}
+                    ></i>
                   </div>
                   {item.freeDelivery ? (
                     <p className=" text-xs flex justify-start">

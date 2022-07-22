@@ -26,7 +26,7 @@ function PrimeSlider() {
         {data.map((image, index) => {
           return (
             <SwiperSlide key={index}>
-              <img src={image} />
+              <img src={image} alt="" />
             </SwiperSlide>
           );
         })}
