@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./SlideProducts.css";
+import { Link } from "react-router-dom";
 
 import { Pagination, Navigation } from "swiper";
 
@@ -31,7 +32,13 @@ function SlideProducts() {
       >
         {sliderProducts.map((item, index) => (
           <SwiperSlide key={index} className=" p-3">
-            <img src={item.image} className="object-fill" alt="" />
+            <Link to={`/productDetails/${item.id}`}>
+              <img
+                src={item.image}
+                className="object-fill cursor-pointer"
+                alt=""
+              />
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>

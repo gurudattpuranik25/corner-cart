@@ -3,6 +3,7 @@ import data from "./data";
 import { FcCancel } from "react-icons/fc";
 import { FcApproval } from "react-icons/fc";
 import { BiRupee } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 function TopDeals({ addToCart }) {
   const {
@@ -25,7 +26,9 @@ function TopDeals({ addToCart }) {
             </h1>
             {topDealsCardOne.map((item) => (
               <div key={item.id}>
-                <img src={item.image} alt="laptop" />
+                <Link to={`/productDetails/${item.id}`}>
+                  <img src={item.image} alt="" className=" cursor-pointer" />
+                </Link>
                 <div className=" flex justify-between mt-2">
                   <p>{item.name}</p>
                   <p className=" flex items-center">
@@ -63,7 +66,9 @@ function TopDeals({ addToCart }) {
             <div className=" grid grid-cols-2 gap-x-3 gap-y-5">
               {topDealsCardTwo.map((item) => (
                 <div key={item.id}>
-                  <img src={item.image} alt="laptop" />
+                  <Link to={`/productDetails/${item.id}`}>
+                    <img src={item.image} alt="" className=" cursor-pointer" />
+                  </Link>
                   <div className=" flex justify-between mt-2">
                     <p>{item.name}</p>
                     <p className=" flex items-center">
@@ -102,7 +107,9 @@ function TopDeals({ addToCart }) {
             <div className=" grid grid-cols-2 gap-x-3 gap-y-5">
               {topDealsCardThree.map((item) => (
                 <div key={item.id}>
-                  <img src={item.image} alt="laptop" />
+                  <Link to={`/productDetails/${item.id}`}>
+                    <img src={item.image} alt="" className=" cursor-pointer" />
+                  </Link>
                   <div className=" flex justify-between mt-2">
                     <p>{item.name}</p>
                     <p className=" flex items-center">
@@ -141,7 +148,9 @@ function TopDeals({ addToCart }) {
             <div className=" grid grid-cols-2 gap-x-3 gap-y-5">
               {topDealsCardFour.map((item) => (
                 <div key={item.id}>
-                  <img src={item.image} alt="laptop" />
+                  <Link to={`/productDetails/${item.id}`}>
+                    <img src={item.image} alt="" className=" cursor-pointer" />
+                  </Link>
                   <div className=" flex justify-between mt-2">
                     <p>{item.name}</p>
                     <p className=" flex items-center">

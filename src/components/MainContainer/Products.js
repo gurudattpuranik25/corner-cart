@@ -3,8 +3,9 @@ import data from "./data";
 import { FcCancel } from "react-icons/fc";
 import { FcApproval } from "react-icons/fc";
 import { BiRupee } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
-function Products({ addToCart }) {
+function Products({ addToCart, searchItem }) {
   const { productList } = data;
 
   return (
@@ -14,7 +15,13 @@ function Products({ addToCart }) {
           key={item.id}
           className=" w-[16rem] h-[19rem] p-4 bg-white rounded-sm"
         >
-          <img src={item.image} className=" w-full h-[70%]" alt="" />
+          <Link to={`/productDetails/${item.id}`}>
+            <img
+              src={item.image}
+              className=" w-full h-[70%]  cursor-pointer"
+              alt=""
+            />
+          </Link>
           <div className=" flex justify-between mt-2">
             <p>{item.name}</p>
             <p className=" flex items-center">

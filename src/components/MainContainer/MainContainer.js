@@ -5,13 +5,13 @@ import ProductList from "./ProductList";
 import Products from "./Products";
 import SlideProducts from "./SlideProducts";
 
-function MainContainer({ addToCart }) {
+function MainContainer({ addToCart, freeDelivery }) {
   return (
     <div>
       <PrimeSlider />
       <ProductList addToCart={addToCart} />
       <div className=" ml-3 mt-6  flex gap-8">
-        <Filter />
+        <Filter freeDelivery={freeDelivery} />
         <Products addToCart={addToCart} />
       </div>
       <div className=" mb-6">
