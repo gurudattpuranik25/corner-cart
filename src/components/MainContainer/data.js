@@ -19,6 +19,8 @@ import ProductHelmet from "../../images/ProductHelmet.jpg";
 import ProductMassager from "../../images/ProductMassager.jpg";
 import ProductRack from "../../images/ProductRack.jpg";
 import ProductTools from "../../images/ProductTools.jpg";
+import ProductJoystick from "../../images/ProductJoystick.jpg";
+import ProductSmartwatch from "../../images/ProductSmartwatch.jpg";
 import SliderProductOne from "../../images/SliderProductOne.jpg";
 import SliderProductTwo from "../../images/SliderProductTwo.jpg";
 import SliderProductThree from "../../images/SliderProductThree.jpg";
@@ -269,10 +271,32 @@ const data = {
       freeDelivery: true,
       category: "tools",
     },
+    {
+      id: "22",
+      image: ProductJoystick,
+      name: "Redgear Gamepad",
+      price: 115,
+      description:
+        "Redgear Pro Wireless Gamepad with 2.4GHz Wireless Technology, Integrated Dual Intensity Motor, Illuminated Keys for PC(Compatible with Windows 7/8/8.1/10 only)",
+      rating: "⭐⭐⭐⭐⭐",
+      freeDelivery: false,
+      category: "gamepad",
+    },
+    {
+      id: "23",
+      image: ProductSmartwatch,
+      name: "Noise SmartWatch",
+      price: 85,
+      description:
+        "Noise ColorFit Ultra Buzz Bluetooth Calling Smart Watch with 1.75 HD Display, 320x385 px Resolution, 100 Sports Modes, Stock Market Info Smartwatch for Men & Women (Charcoal Black)",
+      rating: "⭐⭐⭐⭐",
+      freeDelivery: true,
+      category: "watches",
+    },
   ],
   sliderProducts: [
     {
-      id: "22",
+      id: "24",
       image: SliderProductOne,
       name: "Amazon Alexa",
       price: 78,
@@ -283,7 +307,7 @@ const data = {
       category: "alexa",
     },
     {
-      id: "23",
+      id: "25",
       image: SliderProductTwo,
       name: "Fererro Rocher",
       price: 210,
@@ -294,7 +318,7 @@ const data = {
       category: "chocolate",
     },
     {
-      id: "24",
+      id: "26",
       image: SliderProductThree,
       name: "Riding Gloves",
       price: 115,
@@ -304,8 +328,9 @@ const data = {
       freeDelivery: false,
       category: "gloves",
     },
+
     {
-      id: "25",
+      id: "27",
       image: SliderProductFour,
       name: "Hair Color",
       price: 85,
@@ -316,7 +341,7 @@ const data = {
       category: "hairColor",
     },
     {
-      id: "26",
+      id: "28",
       image: SliderProductFive,
       name: "Helmet",
       price: 145,
@@ -327,7 +352,7 @@ const data = {
       category: "helmet",
     },
     {
-      id: "27",
+      id: "29",
       image: SliderProductSix,
       name: "Body Massager",
       price: 255,
@@ -338,7 +363,7 @@ const data = {
       category: "massager",
     },
     {
-      id: "28",
+      id: "30",
       image: SliderProductSeven,
       name: "Floating Rack",
       price: 320,
@@ -349,7 +374,7 @@ const data = {
       category: "rack",
     },
     {
-      id: "29",
+      id: "31",
       image: SliderProductEight,
       name: "Engineering Tools",
       price: 785,
@@ -360,7 +385,7 @@ const data = {
       category: "tools",
     },
     {
-      id: "30",
+      id: "32",
       image: SliderProductNine,
       name: "Engineering Tools",
       price: 175,
@@ -371,7 +396,7 @@ const data = {
       category: "tools",
     },
     {
-      id: "31",
+      id: "33",
       image: SliderProductTen,
       name: "Engineering Tools",
       price: 65,
@@ -382,7 +407,7 @@ const data = {
       category: "tools",
     },
     {
-      id: "32",
+      id: "34",
       image: SliderProductEleven,
       name: "Engineering Tools",
       price: 885,
@@ -392,7 +417,7 @@ const data = {
       category: "tools",
     },
     {
-      id: "33",
+      id: "35",
       image: SliderProductTwelve,
       name: "Engineering Tools",
       price: 125,

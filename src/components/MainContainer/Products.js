@@ -9,11 +9,11 @@ function Products({ addToCart, searchItem }) {
   const { productList } = data;
 
   return (
-    <div className=" grid grid-cols-4 gap-7">
+    <div className=" grid grid-cols-5 gap-7">
       {productList.map((item) => (
         <div
           key={item.id}
-          className=" w-[16rem] h-[19rem] p-4 bg-white rounded-sm"
+          className=" w-[17.3rem] h-[21rem] p-4 bg-white rounded-sm"
         >
           <Link to={`/productDetails/${item.id}`}>
             <img

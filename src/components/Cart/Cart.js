@@ -4,8 +4,11 @@ import { AiOutlinePlus } from "react-icons/ai";
 import { AiOutlineMinus } from "react-icons/ai";
 import EmptyCart from "../../images/EmptyCart.JPG";
 import { Link } from "react-router-dom";
+import { useAuth } from "../Context/AuthContext";
 
 function Cart({ itemArray, removeFromCart, addToCart, subtractFromCart }) {
+  const { currentUser } = useAuth();
+
   const subTotal = itemArray.reduce(
     (accumulator, current) => accumulator + current.price * current.quantity,
     0
@@ -79,7 +82,7 @@ function Cart({ itemArray, removeFromCart, addToCart, subtractFromCart }) {
             </h1>
             <Link
               className=" text-lg shadow-lg bg-yellow-400 px-4 rounded-lg"
-              to="/checkout"
+              to={`/${currentUser ? "checkout" : "login"}`}
             >
               Proceed To Buy
             </Link>

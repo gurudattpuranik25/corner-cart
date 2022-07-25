@@ -4,6 +4,11 @@ import { Switch, Route } from "react-router-dom";
 import Cart from "./components/Cart/Cart";
 import { useState } from "react";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
+import Checkout from "./components/Checkout/Checkout";
+import Login from "./components/Authentication/Login";
+import SignUp from "./components/Authentication/SignUp";
+import AuthContextProvider from "./components/Context/AuthContext";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [itemArray, setItemArray] = useState([]);
@@ -50,33 +55,60 @@ function App() {
   };
 
   return (
-    <div>
-      <div className="sticky top-0 z-50">
-        <Navbar itemArray={itemArray} searchFilter={searchFilter} />
-      </div>
-      <Switch>
-        <Route exact path="/">
-          <div className="relative">
-            <MainContainer
+    <AuthContextProvider>
+      <div>
+        <div className="sticky top-0 z-50">
+          <Navbar itemArray={itemArray} searchFilter={searchFilter} />
+        </div>
+        <Switch>
+          <Route exact path="/">
+            <div className="relative">
+              <MainContainer
+                addToCart={addToCart}
+                searchItem={searchItem}
+                freeDelivery={freeDelivery}
+              />
+            </div>
+            <Footer />
+          </Route>
+          <Route className=" mb-6" path="/cart">
+            <Cart
+              itemArray={itemArray}
               addToCart={addToCart}
-              searchItem={searchItem}
-              freeDelivery={freeDelivery}
+              removeFromCart={removeFromCart}
+              subtractFromCart={subtractFromCart}
             />
-          </div>
-        </Route>
-        <Route path="/cart">
-          <Cart
-            itemArray={itemArray}
-            addToCart={addToCart}
-            removeFromCart={removeFromCart}
-            subtractFromCart={subtractFromCart}
-          />
-        </Route>
-        <Route path="/productDetails/:productId">
-          <ProductDetails addToCart={addToCart} />
-        </Route>
-      </Switch>
-    </div>
+            {/* <div className=" absolute bottom-0 w-[100%]">
+              <Footer />
+            </div> */}
+          </Route>
+          <Route path="/productDetails/:productId">
+            <ProductDetails addToCart={addToCart} />
+            <div className=" absolute bottom-0 w-[100%]">
+              <Footer />
+            </div>
+          </Route>
+          <Route path="/checkout">
+            <Checkout />
+            <div className=" absolute bottom-0 w-[100%]">
+              <Footer />
+            </div>
+          </Route>
+          <Route path="/login">
+            <Login />
+            <div className=" absolute bottom-0 w-[100%]">
+              <Footer />
+            </div>
+          </Route>
+          <Route path="/signUp">
+            <SignUp />
+            <div className=" absolute bottom-0 w-[100%]">
+              <Footer />
+            </div>
+          </Route>
+        </Switch>
+      </div>
+    </AuthContextProvider>
   );
 }
 

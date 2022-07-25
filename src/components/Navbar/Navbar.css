@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script:wght@400;500;600;700&family=Square+Peg&display=swap");
+
+.heading {
+  color: white;
+  font-size: 2rem;
+  font-family: "Cedarville Cursive", cursive;
+  letter-spacing: 0.1rem;
+  margin: auto;
+}

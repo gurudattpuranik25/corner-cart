@@ -1,13 +1,14 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBq4ZpVWh-kCWN4UMFZhFTV8LtXpKY6eM4",
-  authDomain: "corner-cart.firebaseapp.com",
-  projectId: "corner-cart",
-  storageBucket: "corner-cart.appspot.com",
-  messagingSenderId: "116112378294",
-  appId: "1:116112378294:web:d5dd841a29d11e9e3ad917",
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
 };
 
 const app = initializeApp(firebaseConfig);
@@ -17,14 +18,10 @@ const provider = new GoogleAuthProvider();
 
 export const signInWithGoogle = () => {
   signInWithPopup(auth, provider)
-    .then((result) => {
-      const name = result.user.displayName;
-      const image = result.user.photoURL;
-
-      localStorage.setItem("name", name);
-      localStorage.setItem("image", image);
-    })
+    .then((result) => result)
     .catch((error) => {
-      console.log(error);
+      alert(error);
     });
 };
+
+export const db = getFirestore(app);
