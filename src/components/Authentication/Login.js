@@ -62,7 +62,7 @@ function Login() {
         type="submit"
         className=" w-full bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 font-semibold flex justify-center text-lg p-2 rounded-lg"
       >
-        Sign Up
+        New user ? &nbsp; <span className=" underline">Sign Up</span>
       </Link>
       <button
         className="  items-center text-lg gap-2  bg-gradient-to-r from-indigo-400 via-purple-400 font-semibold to-pink-400 flex justify-center p-2 rounded-lg"
